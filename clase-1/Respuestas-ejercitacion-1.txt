@@ -1,0 +1,107 @@
+Ejercitación modulo 1
+
+Respuestas:
+
+1. Queremos ingresar a la aplicación Netflix y ver la película “Volver al Futuro” que está publicada en su catálogo. Luego de terminar de ver la película hay que cerrar sesión de la aplicación.
+
+   (a) Explique cuales soluciones considera correctas, incorrectas y por qué.
+
+   La solución 1 es correcta. Sin embargo, puede ser ineficiente si la película está al final    del catálogo.
+
+   La solución 2 es incorrecta porque no garantiza que se verá la película "Volver al Futuro" si no    se encuentra al principio del catálogo.
+
+   La solución 3 también es incorrecta. El hecho de repetir 20 veces la acción “avanzar de película”    no garantiza que se encuentre la película en alguna de esas iteraciones.
+
+   Solución 4: Esta solución es posiblemente correcta ya que siempre que la película se encuentre    efectivamente en el catálogo, la acción de avanzar de película culminara al encontrarla.
+
+   Solución 5: Esta solución es correcta. Inicia sesión, busca la película y la reproduce si está en    los resultados antes de cerrar sesión.
+
+   (b)	¿Qué ocurriría con la solución 4 si la película “Volver al Futuro” NO está publicada en el    catálogo de Netflix?
+
+   Si la película "Volver al Futuro" no está publicada en el catálogo de Netflix, la Solución 4    quedará atrapada en un bucle infinito ya que la condición "mientras (no sea la película “Volver al    Futuro”)" nunca se cumplirá.
+
+   (c)	De las soluciones correctas ¿Cuál considera que “es mejor”? ¿Por qué?
+
+   De las soluciones correctas, la Solución 5 es la mejor opción. Buscar la película directamente en    el catálogo a través de la opción de búsqueda es más eficiente y seguro, ya que garantiza    encontrar la película si está disponible.
+
+2. Para las fiestas Papá Noel nos trajo un robot lavavajillas y tenemos que enseñarle o programarlo para lavar los platos. El robot entiende el lenguaje humano o lenguaje Natural.
+
+   Considere que la esponja se carga con detergente al principio y dura todo el lavado. Luego de    lavar un plato se lo deja en la pileta de cocina secando.
+
+   Escriba un algoritmo para cada uno de los incisos:
+
+   a) Lavar 1 plato.
+
+   1. Agregar detergente a la esponja.
+   2. Lavar el plato con la esponja.
+   3. Dejar el plato en la pileta de cocina para secar.
+
+   b) Lavar 20 platos.
+
+   1. Agregar detergente a la esponja.
+   2. Repetir 20 veces:
+      a. Lavar un plato con la esponja.
+      b. Dejar el plato en la pileta de cocina para secar.
+
+   c) Lavar una pila de platos (no sabemos la cantidad al comenzar).
+
+   1. Agregar detergente a la esponja.
+   2. Mientras queden platos en la pila:
+      a. Tomar un plato de la pila.
+      b. Lavar el plato con la esponja.
+      c. Dejar el plato en la pileta de cocina para secar.
+
+   d) Lavar una pila de platos, pero solo aquellos que están sucios, los limpios se deben guardar.
+
+   1. Agregar detergente a la esponja.
+   2. Mientras queden platos en la pila:
+      A-1. Si el plato esta sucio: 
+        a. Tomar un plato de la pila.
+        b. Lavar el plato con la esponja.
+        c. Dejar el plato en la pileta de cocina para secar.
+      A-2. Si el plato no está sucio:
+        a. Guardar el plato en el mueble de la vajilla.
+
+3. Escriba un algoritmo que le permita trasladar 50 macetas del patio de la casa al frente de la misma. Considere que sólo tiene disponible la mano derecha para llevar una maceta a la vez. Para realizar el trabajo debe ponerse guantes y quitárselos luego de haber realizado el trabajo.
+
+   1. Ponerse guantes.
+   2. Repetir 50 veces:
+      a. Agarrar una maceta con la mano derecha.
+      b. Trasladar la maceta al frente de la casa.
+   3. Quitarse los guantes.
+
+3b. Modifique el algoritmo 3 suponiendo que tiene disponibles ambas manos y puede trasladar dos macetas a la vez.
+
+   1. Ponerse guantes.
+   2. Repetir 25 veces:
+      a. Agarrar dos macetas, una con cada mano.
+      b. Trasladar las dos macetas al frente de la casa.
+   3. Quitarse los guantes.
+
+4. Escriba un algoritmo que le permita cargar gaseosas en un camión. En el camión entran 120 cajones y se encuentra vacío. En cada cajón entran 6 gaseosas. Una vez que el camión está completo, avisamos al conductor que arranque.
+
+   Considere que cuenta con gaseosas suficientes para completar el camión.
+
+   1. Empezar a llevar la cuenta de cajones cargados en el camión, empezando desde  0.
+   2. Mientras la cuenta de cajones cargados sea menor que 120:
+      a. Cargar un cajón con 6 gaseosas en el camión.
+      b. Aumentar el contador de cajones cargados en 1.
+   3. Avisar al conductor que arranque.
+
+4b. Modifique el algoritmo 4 suponiendo que hay cajones rotos y pueden entrar menos de 6 gaseosas para completarlo.
+
+   1. Empezar a llevar la cuenta de gaseosas cargadas en el camión, empezando desde 0.
+   2. Mientras queden gaseosas:
+      a. Calcular la capacidad del siguiente cajón (puede ser menor a 6 si el cajón está roto).
+      b. Cargar el cajón con gaseosas hasta su capacidad.
+      c. Reducir la cantidad de gaseosas disponibles en función de las gaseosas cargadas en el cajón.
+      d. Avisar al conductor si el camión está completo.
+
+4c. Modifique el algoritmo 4b suponiendo que no se conoce la cantidad de cajones máxima que entran en el camión para completarse.
+
+   1. Empezar a llevar la cuenta de cajones cargados en el camión, empezando desde  0.
+   2. Mientras queden gaseosas:
+      a. Calcular la cantidad de gaseosas que caben en un cajón (puede ser menor a 6 si el cajón está       roto).
+      b. Cargar el cajón con gaseosas hasta su capacidad.
+      c. Reducir la cantidad de gaseosas disponibles en función de las gaseosas cargadas en el cajón.
+      d. Avisar al conductor si el camión está completo o no hay más gaseosas.
